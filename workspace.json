@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "heart-sutra": "apps/heart-sutra",
+    "heart-sutra-e2e": "apps/heart-sutra-e2e"
+  }
+}

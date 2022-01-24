@@ -1,0 +1,28 @@
+{
+  "root": "apps/heart-sutra-e2e",
+  "sourceRoot": "apps/heart-sutra-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/heart-sutra-e2e/cypress.json",
+        "devServerTarget": "heart-sutra:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "heart-sutra:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/heart-sutra-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["heart-sutra"]
+}
